@@ -1,6 +1,14 @@
+html {
+  font-size: calc(60% + 0.8vmin);
+}
+
+* {
+  font-size: 1rem;
+}
+
 body {
   display: flex;
-  align-items: center;
   justify-content: center;
   height: 100vh;
+  padding-top: 200px;
 }
