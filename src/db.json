@@ -1,0 +1,55 @@
+{
+
+"snippets" : [
+
+    {
+        "title" : "Math.floor & Math.random",
+        "description" : "Returns a random number between 1 and 10.",
+        "video" : "https://www.youtube.com/watch?v=POn4cZ0jL-o",
+        "codesyntax" : [ "Math.floor(Math.random() * 11)" ],
+        "docs" : "docslinkhere"
+    },
+
+    {
+        "title" : "Switch Statement",
+        "description" : "description coming later",
+        "video" : "https://www.youtube.com/watch?v=fM5qnyasUYI",
+        "codesyntax" : [ "switch(expression) {",
+            "case x:",
+            "// code block",
+            " break;",
+            "case y:",
+            " // code block",
+            "break;",
+            "default:",
+            " // code block",
+            "} "
+        ],
+        "docs" : "docslinkhere"
+    },
+
+    {
+        "title" : "For Loop",
+        "description" : "description coming later",
+        "video" : "https://www.youtube.com/watch?v=Y8sMnRQYr3c",
+        "codesyntax" : [ "for (let i = 0; i <  ; i++) { XX }" ],
+        "docs" : "docslinkhere"
+    },
+
+    {
+        "title" : "Use State",
+        "description" : "description coming later",
+        "video" : "https://www.youtube.com/watch?v=4pO-HcG2igk&t=309s",
+        "codesyntax" : [ "const [variable , setVariable] = useState(0);" ],
+        "docs" : "docslinkhere"
+    },
+
+    {
+        "title" : "While Loop",
+        "description" : "description coming later",
+        "video" : "https://www.youtube.com/watch?v=PpbFyLTtpWI",
+        "codesyntax" : [ "while (condition) { // code block to be executed}" ],
+        "docs" : "docslinkhere"
+    }
+]
+}

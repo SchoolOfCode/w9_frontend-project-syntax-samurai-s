@@ -5,3 +5,6 @@ function SearchResults({search}) {
 }
 
 export default SearchResults;
+
+
+// for each item in an array prop, create a new p 
