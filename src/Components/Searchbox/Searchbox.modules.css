@@ -22,13 +22,14 @@
 .dataResult {
   display: flex;
   flex-direction: column;
-  width: 300px;
+  width: 430px;
   max-height: 200px;
   margin-top: 20px;
   background-color: white;
   box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
   overflow-x: hidden;
   overflow-y: auto;
+  border-radius: 2px;
 }
 .dataResult::-webkit-scrollbar {
   display: none;
@@ -50,13 +51,32 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  background-color: lightgrey;
-  cursor: pointer;
-}
-
 #clearBtn {
   cursor: pointer;
 }
 
+.eachResult {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.eachResult:hover {
+  background-color: lightgrey;
+  cursor: pointer;
+}
+
+.star-icon {
+ margin-left: 10px;
+ margin-top: 5px;
+ color: black;
+}
+
+
+.star-icon:hover,
+.star-icon-clicked {
+  color: gold;
+  margin-left: 10px;
+ margin-top: 5px;
+ }
 

@@ -1,11 +1,14 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import "./Searchbox.modules.css";
 import { useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import CloseIcon from "@mui/icons-material/Close";
+import StarIcon from "@mui/icons-material/Star";
 
-function Searchbox({ placeholder, data, onClick }) {
+function Searchbox({ placeholder, data, resultClick }) {
   const [filteredData, setFilteredData] = useState([]);
   const [wordEntered, setWordEntered] = useState("");
+  const [isActive, setActive] = useState("false");
 
   const handleFilter = (e) => {
     const searchWord = e.target.value;
@@ -23,7 +26,18 @@ function Searchbox({ placeholder, data, onClick }) {
   const clearInput = () => {
     setFilteredData([]);
     setWordEntered("");
-  }
+  };
+
+
+  const ToggleClass = () => {
+    setActive(!isActive);
+  };
+
+  // Function to add selected item to favourites
+  // const starClick = (e) => {
+  //   const star = e.target;
+
+  // };
 
   return (
     <div className="search">
@@ -47,9 +61,19 @@ function Searchbox({ placeholder, data, onClick }) {
         <div className="dataResult">
           {filteredData.map((value, key) => {
             return (
-              <a className="dataItem" onClick={onClick}>
-                <p>{value.title}</p>
-              </a>
+              <div className="eachResult">
+                <a href="#" className={isActive ? "star-icon" : "star-icon-clicked"} onClick={ToggleClass}>
+                  <StarIcon  fontSize="small" />
+                </a>
+                <a
+                  href="#"
+                  key={key}
+                  className="dataItem"
+                  onClick={resultClick}
+                >
+                  <p>{value.title}</p>
+                </a>
+              </div>
             );
           })}
         </div>

@@ -5,21 +5,25 @@ import Searchbox from "../Searchbox/Searchbox";
 import "./App.css";
 
 function App() {
-  const [searchArray, setSearchArray] = useState([]);
 
- 
-  function onClick(e) {
+  const resultClick = (e) => {
     e.preventDefault();
-    console.log('clicked')
+    const leftContainer = document.querySelector('#left');
+    const rightContainer = document.querySelector('#right');
+    leftContainer.classList.add('left-container');
+    rightContainer.classList.add('right-container');
   }
-
- 
-
-
 
   return (
     <div id="container">
-      <Searchbox placeholder="Enter a search query..." data={snippetJSON.snippets} onClick={onClick} />
+      <div id="left">
+        <Searchbox
+          placeholder="Enter a search query..."
+          data={snippetJSON.snippets}
+          resultClick={resultClick}
+        />
+      </div>
+      <div id="right"></div>
     </div>
   );
 }
