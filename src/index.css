@@ -1,5 +1,10 @@
 :root {
+  --primary: #020122;
+  --secondary: #C74331;
   --main-font: "Montserrat", sans-serif;
+  --title-weight: 400;
+  --title-font-size: 1.3rem;
+  --subtitle-font-size: 0.9rem;
 }
 
 html {
@@ -19,4 +24,8 @@ body {
   overflow: hidden;
   margin: 0;
   padding: 0;
+}
+
+.hidden {
+  display: none;
 }

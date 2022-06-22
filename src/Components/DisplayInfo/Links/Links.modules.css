@@ -1,0 +1,13 @@
+#links-container {
+  display: flex;
+}
+
+#links-title {
+  text-transform: uppercase;
+  /* border-bottom: 1px solid;
+    border-color: var(--primary); */
+  color: var(--primary);
+  font-weight: var(--title-weight);
+  letter-spacing: 0.2rem;
+  font-size: var(--subtitle-font-size);
+}
