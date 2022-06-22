@@ -1,37 +1,23 @@
 import "./Video.modules.css";
-import PropTypes from "prop-types";
+import YouTube from 'react-youtube'
 
-// function Video() {
-//   return (
-//     <video
-//       id="video"
-//       src="https://www.youtube.com/watch?v=TKPAh3_CtBY&ab_channel=dcode"
-//     ></video>
-//   );
-// }
-
-// export default Video;
-
-const YoutubeEmbed = ({ embedId }) => {
+function Video({video}) {
+  const opts = {
+    height: '200',
+    width: '100%',
+    playerVars: {
+      autoplay: 0,
+    }
+  }
   return (
-    <div className="video-responsive">
-      <iframe
-        width="450"
-        height="200"
-        src={"https://www.youtube.com/embed/TKPAh3_CtBY"}
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-        title="Embedded youtube"
-      />
-    </div>
+    <YouTube 
+      id="video"
+      videoId={video}
+      opts={opts}
+    ></YouTube>
   );
-};
+}
 
-YoutubeEmbed.propTypes = {
-  embedId: PropTypes.string.isRequired,
-};
 
-export default YoutubeEmbed;
+export default Video;
 
-{/* <iframe width="560" height="315" src="https://www.youtube.com/embed/TKPAh3_CtBY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}

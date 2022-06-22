@@ -5,7 +5,6 @@ import SearchIcon from "@mui/icons-material/Search";
 import CloseIcon from "@mui/icons-material/Close";
 import StarIcon from "@mui/icons-material/Star";
 
-
 function Searchbox({ placeholder, data, resultClick }) {
   const [filteredData, setFilteredData] = useState([]);
   const [wordEntered, setWordEntered] = useState("");
@@ -28,7 +27,6 @@ function Searchbox({ placeholder, data, resultClick }) {
     setFilteredData([]);
     setWordEntered("");
   };
-
 
   const ToggleClass = () => {
     setActive(!isActive);
@@ -63,8 +61,12 @@ function Searchbox({ placeholder, data, resultClick }) {
           {filteredData.map((value, key) => {
             return (
               <div className="eachResult">
-                <a href="#" className={isActive ? "star-icon" : "star-icon-clicked"} onClick={ToggleClass}>
-                  <StarIcon  fontSize="small" />
+                <a
+                  href="#"
+                  className={isActive ? "star-icon" : "star-icon-clicked"}
+                  onClick={ToggleClass}
+                >
+                  <StarIcon fontSize="small" />
                 </a>
                 <a
                   href="#"
