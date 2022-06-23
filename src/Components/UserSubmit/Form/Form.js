@@ -49,7 +49,6 @@ function Form() {
   };
 
   const onSubmit = (e) => {
-    e.preventDefault();
     console.log(title, description, video, snippet, docs);
     setFormValue({
       title: title,
@@ -72,7 +71,7 @@ function Form() {
   };
 
   return (
-    <form id="submit-form">
+    <form onSubmit={onSubmit} id="submit-form">
       <div id="styling-container">
         <div id="logo-title-container">
           <SubmitLogo />
@@ -127,7 +126,7 @@ function Form() {
             onChange={onChangeDocs}
           />
         </label>
-        <input onClick={onSubmit} id="submit-button" type="submit" value="Submit Snippet" />
+        <input id="submit-button" type="submit" value="Submit Snippet" />
       </div>
     </form>
   );

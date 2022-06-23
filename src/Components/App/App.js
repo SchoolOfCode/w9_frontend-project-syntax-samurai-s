@@ -18,6 +18,7 @@ import "./App.css";
 function App() {
   const [snippetResponse, setSnippetResponse] = useState("");
   const [snippetVideo, setSnippetVideo] = useState("");
+  const [codeSnippet, setCodeSnippet] = useState("")
   const [filteredData, setFilteredData] = useState([]);
   const [wordEntered, setWordEntered] = useState("");
 
@@ -46,7 +47,9 @@ function App() {
       .get(`http://localhost:3000/snippets?title=${clickedResult}`)
       .then((response) => {
         const snippet = response.data.data[0];
-        console.log(snippet.video);
+        const cutSnippet = snippet.codesyntax;
+        // if (cutSnippet.charAt(0) === "{")
+        console.log(cutSnippet);
         const videoId = snippet.video.slice(32);
         setSnippetResponse(snippet);
         setSnippetVideo(videoId);
