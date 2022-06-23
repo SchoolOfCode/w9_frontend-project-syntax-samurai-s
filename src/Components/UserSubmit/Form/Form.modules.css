@@ -48,4 +48,5 @@
   border: 2px solid;
   border-color: var(--secondary);
   border-radius: 10px;
+  background-color: transparent;
 }

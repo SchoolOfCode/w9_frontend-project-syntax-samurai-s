@@ -1,5 +1,4 @@
 import "./Form.modules.css";
-import SmallIcon from "../../../assets/smaller.png";
 import SubmitLogo from "../../SubmitLogo/SubmitLogo";
 
 function Form() {

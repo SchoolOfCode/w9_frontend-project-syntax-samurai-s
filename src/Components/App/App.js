@@ -55,8 +55,8 @@ function App() {
 
   return (
     <div>
+      <Navbar />
       <Router>
-        {/* Navbar Here */}
         <Switch>
           <Route exact path="/">
             <div id="container" className="margin">
