@@ -1,10 +1,10 @@
 import "./Form.modules.css";
 import SubmitLogo from "../../SubmitLogo/SubmitLogo";
-import React from "react";
+import { useState } from "react";
 import axios from "axios";
 
 function Form() {
-  const [formValue, setformValue] = React.useState({
+  const [formValue, setFormValue] = useState({
     title: "",
     description: "",
     video: "",
@@ -12,37 +12,67 @@ function Form() {
     docs: "",
   });
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    // const form_data = new FormData();
-    // form_data.append("title", formValue.title);
-    // form_data.append("description", formValue.description);
-    // form_data.append("video", formValue.video);
-    // form_data.append("codesyntax", formValue.codesyntax);
-    // form_data.append("docs", formValue.docs);
+  const [title, setTitle] = useState("");
+  const [snippet, setSnippet] = useState("");
+  const [description, setDescription] = useState("");
+  const [video, setVideo] = useState("");
+  const [docs, setDocs] = useState("");
 
-    // make axios post request
-    const Response = await axios.post("<http:/localhost:3000/snippets>", {
-      title: formValue.title,
-      description: formValue.description,
-      video: formValue.video,
-      codesyntax: formValue.video,
-      docs: formValue.docs,
-    });
-
-    let data = Response.data.data;
-    console.log(data);
+  const onChangeTitle = (e) => {
+    const input = e.target.value;
+    console.log(input)
+    setTitle(input);
   };
 
-  const handleChange = (event) => {
-    setformValue({
-      ...formValue,
-      [event.target.name]: event.target.value,
+  const onChangeSnippet = (e) => {
+    const input = e.target.value;
+    console.log(input)
+    setSnippet(input);
+  };
+
+  const onChangeDescription = (e) => {
+    const input = e.target.value;
+    console.log(input)
+    setDescription(input);
+  };
+
+  const onChangeVideo = (e) => {
+    const input = e.target.value;
+    console.log(input)
+    setVideo(input);
+  };
+
+  const onChangeDocs = (e) => {
+    const input = e.target.value;
+    console.log(input)
+    setDocs(input);
+  };
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    console.log(title, description, video, snippet, docs);
+    setFormValue({
+      title: title,
+      description: description,
+      video: video,
+      codesyntax: snippet,
+      docs: docs,
     });
+    axios
+      .post("http://localhost:3000/snippets", {
+        title: title,
+        description: description,
+        video: video,
+        codesyntax: snippet,
+        docs: docs,
+      })
+      .then((response) => {
+        console.log(response);
+      });
   };
 
   return (
-    <form onSubmit={handleSubmit} id="submit-form">
+    <form id="submit-form">
       <div id="styling-container">
         <div id="logo-title-container">
           <SubmitLogo />
@@ -54,8 +84,7 @@ function Form() {
             className="input-box"
             type="text"
             name="title"
-            value={formValue.title}
-            onChange={handleChange}
+            onChange={onChangeTitle}
           />
         </label>
         <label className="form-labels" id="submit-snippet">
@@ -66,8 +95,7 @@ function Form() {
             cols="50"
             type="text"
             name="snippet"
-            value={formValue.codesyntax}
-            onChange={handleChange}
+            onChange={onChangeSnippet}
           />
         </label>
         <label className="form-labels" id="submit-description">
@@ -78,8 +106,7 @@ function Form() {
             cols="50"
             type="text"
             name="description"
-            value={formValue.description}
-            onChange={handleChange}
+            onChange={onChangeDescription}
           />
         </label>
         <label className="form-labels" id="submit-video">
@@ -88,8 +115,7 @@ function Form() {
             className="input-box"
             type="text"
             name="youtube-link"
-            value={formValue.video}
-            onChange={handleChange}
+            onChange={onChangeVideo}
           ></input>
         </label>
         <label className="form-labels" id="submit-docs">
@@ -98,11 +124,10 @@ function Form() {
             className="input-box"
             type="text"
             name="docs-link"
-            value={formValue.docs}
-            onChange={handleChange}
+            onChange={onChangeDocs}
           />
         </label>
-        <input id="submit-button" type="submit" value="Submit Snippet" />
+        <input onClick={onSubmit} id="submit-button" type="submit" value="Submit Snippet" />
       </div>
     </form>
   );
