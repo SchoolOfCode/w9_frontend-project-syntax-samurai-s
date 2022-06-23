@@ -1,20 +1,19 @@
 import "./Form.modules.css";
 import SubmitLogo from "../../SubmitLogo/SubmitLogo";
-import React from 'react';
-import axios from 'axios';
+import React from "react";
+import axios from "axios";
 
 function Form() {
-
   const [formValue, setformValue] = React.useState({
-    title: '',
-    description: '',
-    video: '',
-    codesyntax: '',
-    docs: ''
+    title: "",
+    description: "",
+    video: "",
+    codesyntax: "",
+    docs: "",
   });
 
-  const handleSubmit = async(e) => {
-e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     // const form_data = new FormData();
     // form_data.append("title", formValue.title);
     // form_data.append("description", formValue.description);
@@ -23,27 +22,24 @@ e.preventDefault();
     // form_data.append("docs", formValue.docs);
 
     // make axios post request
-    const Response = await axios.post(
-      '<http:/localhost:3000/snippets>', { 
-        title: formValue.title,
-        description: formValue.description,
-        video: formValue.video,
+    const Response = await axios.post("<http:/localhost:3000/snippets>", {
+      title: formValue.title,
+      description: formValue.description,
+      video: formValue.video,
       codesyntax: formValue.video,
-      docs: formValue.docs
-      });
-  
-      let data = Response.data.data;
-      console.log(data);
-    };
-  
+      docs: formValue.docs,
+    });
 
+    let data = Response.data.data;
+    console.log(data);
+  };
 
   const handleChange = (event) => {
     setformValue({
       ...formValue,
-      [event.target.name]: event.target.value
+      [event.target.name]: event.target.value,
     });
-  }
+  };
 
   return (
     <form onSubmit={handleSubmit} id="submit-form">
@@ -55,12 +51,12 @@ e.preventDefault();
         <label className="form-labels" id="submit-title">
           Title:
           <input
-          className="input-box"
-          type="text"
-           name="title"
-           value={formValue.title}
-           onChange={handleChange}
-           />
+            className="input-box"
+            type="text"
+            name="title"
+            value={formValue.title}
+            onChange={handleChange}
+          />
         </label>
         <label className="form-labels" id="submit-snippet">
           Code Snippet:
@@ -87,29 +83,23 @@ e.preventDefault();
           />
         </label>
         <label className="form-labels" id="submit-video">
-submit-form
           Youtube Link:
           <input
-          className="input-box"
-          type="text"
-          name="youtube-link"
-          value={formValue.video}
-          onChange={handleChange}
-          />
-
-          YouTube Link:
-          <input className="input-box" type="text" name="youtube-link" />
- main
+            className="input-box"
+            type="text"
+            name="youtube-link"
+            value={formValue.video}
+            onChange={handleChange}
+          ></input>
         </label>
         <label className="form-labels" id="submit-docs">
           Docs Link:
           <input
-          className="input-box"
-          type="text"
-          name="docs-link"
-          value={formValue.docs}
-          onChange={handleChange}
-
+            className="input-box"
+            type="text"
+            name="docs-link"
+            value={formValue.docs}
+            onChange={handleChange}
           />
         </label>
         <input id="submit-button" type="submit" value="Submit Snippet" />
