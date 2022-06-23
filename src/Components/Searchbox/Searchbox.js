@@ -1,18 +1,34 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import "./Searchbox.modules.css";
+import axios from "axios";
 import { useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import CloseIcon from "@mui/icons-material/Close";
 import StarIcon from "@mui/icons-material/Star";
 
-function Searchbox({ placeholder, data, resultClick, filteredData, setFilteredData, setSearch, wordEntered, setWordEntered }) {
+function Searchbox({
+  placeholder,
+  data,
+  resultClick,
+  filteredData,
+  setFilteredData,
+  setSearch,
+  wordEntered,
+  setWordEntered,
+}) {
   // const [filteredData, setFilteredData] = useState([]);
   // const [wordEntered, setWordEntered] = useState("");
   const [isActive, setActive] = useState("false");
 
   const handleFilter = (e) => {
     const searchWord = e.target.value;
+    console.log(searchWord)
     setWordEntered(searchWord);
+    axios
+      .get(`http://localhost:3000/snippets?title=${searchWord}`)
+      .then((response) => {
+        console.log(response.data);
+      });
     const newFilter = data.filter((value) => {
       return value.title.toLowerCase().includes(searchWord.toLowerCase());
     });
@@ -23,8 +39,6 @@ function Searchbox({ placeholder, data, resultClick, filteredData, setFilteredDa
     }
   };
 
-  
-
   const clearInput = () => {
     setFilteredData([]);
     setWordEntered("");
@@ -33,7 +47,6 @@ function Searchbox({ placeholder, data, resultClick, filteredData, setFilteredDa
   const ToggleClass = () => {
     setActive(!isActive);
   };
-
 
   return (
     <div className="search">

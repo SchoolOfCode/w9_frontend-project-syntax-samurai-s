@@ -34,7 +34,7 @@ function Form() {
           />
         </label>
         <label className="form-labels" id="submit-video">
-          Youtube Link:
+          YouTube Link:
           <input className="input-box" type="text" name="youtube-link" />
         </label>
         <label className="form-labels" id="submit-docs">
