@@ -34,11 +34,6 @@ function Searchbox({ placeholder, data, resultClick, filteredData, setFilteredDa
     setActive(!isActive);
   };
 
-  // Function to add selected item to favourites
-  // const starClick = (e) => {
-  //   const star = e.target;
-
-  // };
 
   return (
     <div className="search">
@@ -63,13 +58,6 @@ function Searchbox({ placeholder, data, resultClick, filteredData, setFilteredDa
           {filteredData.map((value, key) => {
             return (
               <div className="eachResult">
-                <a
-                  href="#"
-                  className={isActive ? "star-icon" : "star-icon-clicked"}
-                  onClick={ToggleClass}
-                >
-                  <StarIcon fontSize="small" />
-                </a>
                 <a
                   href="#"
                   key={key}

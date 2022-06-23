@@ -4,13 +4,15 @@ import axios from "axios";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import instance from "../../axiosConfig";
 import snippetJSON from "../../db.json";
+import Navbar from "../Navbar/Navbar";
 import Searchbox from "../Searchbox/Searchbox";
-import CreateLogo from "../Logo/Logo";
+import HomeLogo from "../HomeLogo/HomeLogo";
 import Title from "../DisplayInfo/Title/Title";
 import SnippetBlock from "../DisplayInfo/Snippet/Snippet";
 import CommentBlock from "../DisplayInfo/Comments/Comments";
 import UserSubmit from "../UserSubmit/UserSubmit";
 import Links from "../DisplayInfo/Links/Links";
+import BackgroundImage from "../Background/Background";
 import "./App.css";
 
 function App() {
@@ -52,37 +54,40 @@ function App() {
   };
 
   return (
-    <Router>
-      {/* Navbar Here */}
-      <Switch>
-        <Route exact path="/">
-          <div id="container" className="margin">
-            <div id="left">
-              <CreateLogo />
-              <Searchbox
-                placeholder="Enter a search query..."
-                data={snippetJSON.snippets}
-                resultClick={resultClick}
-                filteredData={filteredData}
-                setFilteredData={setFilteredData}
-                setSearch={setSearch}
-                wordEntered={wordEntered}
-                setWordEntered={setWordEntered}
-              />
+    <div>
+      <Router>
+        {/* Navbar Here */}
+        <Switch>
+          <Route exact path="/">
+            <div id="container" className="margin">
+              <div id="left">
+                <HomeLogo />
+                <Searchbox
+                  placeholder="Enter a search query..."
+                  data={snippetJSON.snippets}
+                  resultClick={resultClick}
+                  filteredData={filteredData}
+                  setFilteredData={setFilteredData}
+                  setSearch={setSearch}
+                  wordEntered={wordEntered}
+                  setWordEntered={setWordEntered}
+                />
+              </div>
+              <div id="right" className="hidden">
+                <Title title={snippetResponse.title} />
+                <SnippetBlock syntax={snippetResponse.codesyntax} />
+                <CommentBlock description={snippetResponse.description} />
+                <Links video={snippetVideo} docs={snippetResponse.docs} />
+              </div>
             </div>
-            <div id="right" className="hidden">
-              <Title title={snippetResponse.title} />
-              <SnippetBlock syntax={snippetResponse.codesyntax} />
-              <CommentBlock description={snippetResponse.description} />
-              <Links video={snippetVideo} docs={snippetResponse.docs} />
-            </div>
-          </div>
-        </Route>
-        <Route path="/submit">
-          <UserSubmit />
-        </Route>
-      </Switch>
-    </Router>
+          </Route>
+          <Route path="/submit">
+            <UserSubmit />
+          </Route>
+        </Switch>
+      </Router>
+      <BackgroundImage />
+    </div>
   );
 }
 
