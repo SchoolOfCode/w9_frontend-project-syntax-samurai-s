@@ -4,7 +4,6 @@ import axios from "axios";
 import { useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import CloseIcon from "@mui/icons-material/Close";
-import StarIcon from "@mui/icons-material/Star";
 
 function Searchbox({
   placeholder,
@@ -22,14 +21,16 @@ function Searchbox({
 
   const handleFilter = (e) => {
     const searchWord = e.target.value;
-    console.log(searchWord)
+    console.log(searchWord);
     setWordEntered(searchWord);
     axios
       .get(`http://localhost:3000/snippets?title=${searchWord}`)
       .then((response) => {
-        console.log(response.data);
+        console.log(response.data.data);
+        setFilteredData(response.data.data)
+
       });
-    const newFilter = data.filter((value) => {
+    const newFilter = filteredData.map((value) => {
       return value.title.toLowerCase().includes(searchWord.toLowerCase());
     });
     if (searchWord === "") {
@@ -44,10 +45,7 @@ function Searchbox({
     setWordEntered("");
   };
 
-  const ToggleClass = () => {
-    setActive(!isActive);
-  };
-
+ 
   return (
     <div className="search">
       <div className="searchInputs">
