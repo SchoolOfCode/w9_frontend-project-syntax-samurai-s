@@ -6,7 +6,7 @@ function SnippetBlock({ syntax }) {
     <div id="snippet-container">
       <h2 id="snippet-title">Code Snippet:</h2>
       <div id="snippet-box">
-        <pre class="prettyprint">
+        <pre className="prettyprint">
           {syntax}
         </pre>
       </div>
