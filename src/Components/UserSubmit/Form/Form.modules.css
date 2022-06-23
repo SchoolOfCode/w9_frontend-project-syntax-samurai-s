@@ -1,9 +1,24 @@
 #submit-form {
   display: flex;
   flex-direction: column;
-
-
-
-
-  
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
+
+#styling-container {
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+.form-labels {
+  color: var(--primary);
+  font-size: var(--subtitle-font-size);
+
+}
+
+
+
