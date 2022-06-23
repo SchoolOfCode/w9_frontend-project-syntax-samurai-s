@@ -87,6 +87,7 @@ e.preventDefault();
           />
         </label>
         <label className="form-labels" id="submit-video">
+submit-form
           Youtube Link:
           <input
           className="input-box"
@@ -95,6 +96,10 @@ e.preventDefault();
           value={formValue.video}
           onChange={handleChange}
           />
+
+          YouTube Link:
+          <input className="input-box" type="text" name="youtube-link" />
+ main
         </label>
         <label className="form-labels" id="submit-docs">
           Docs Link:
