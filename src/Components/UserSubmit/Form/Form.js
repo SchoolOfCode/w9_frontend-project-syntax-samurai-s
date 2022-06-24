@@ -20,31 +20,31 @@ function Form() {
 
   const onChangeTitle = (e) => {
     const input = e.target.value;
-    console.log(input)
+    console.log(input);
     setTitle(input);
   };
 
   const onChangeSnippet = (e) => {
     const input = e.target.value;
-    console.log(input)
+    console.log(input);
     setSnippet(input);
   };
 
   const onChangeDescription = (e) => {
     const input = e.target.value;
-    console.log(input)
+    console.log(input);
     setDescription(input);
   };
 
   const onChangeVideo = (e) => {
     const input = e.target.value;
-    console.log(input)
+    console.log(input);
     setVideo(input);
   };
 
   const onChangeDocs = (e) => {
     const input = e.target.value;
-    console.log(input)
+    console.log(input);
     setDocs(input);
   };
 
