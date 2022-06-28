@@ -16,7 +16,7 @@ own code snippets to the database. New entries to the database can instantly be 
 
 - Code Snippet retrieval
 - Code Snippet database entry
-- Reponsive UI
+- Responsive UI
   <br>
   <br>
 
@@ -26,7 +26,7 @@ own code snippets to the database. New entries to the database can instantly be 
 - User save snippets
 - User registration / Log In system
 - Download Json with code snippet
-- Accessability modes (Colorblind etc)
+- Accessibility modes (Colorblind etc)
   <br>
   <br>
 
@@ -57,7 +57,7 @@ To run this project, you will need to add the following environment variables to
 
 `ANOTHER_API_KEY`
 
-## Code Example dependency
+## Code Example Dependency
 
 ```javascript
 const [isActive, setActive] = useState('false');
