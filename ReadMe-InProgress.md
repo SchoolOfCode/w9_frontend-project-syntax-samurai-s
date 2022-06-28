@@ -12,6 +12,11 @@ own code snippets to the database. New entries to the database can instantly be 
 <br>
 <br>
 
+## Demo
+<div style="text-align:left"><img src="https://i.imgur.com/R0ZJzkh.gif" /></div>
+<br>
+<br>
+
 ## Features
 
 - Code Snippet retrieval
