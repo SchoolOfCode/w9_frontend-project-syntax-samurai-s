@@ -4,7 +4,7 @@
 
 <div style="text-align:center"><img src="https://i.imgur.com/xYKiF06.png" /></div>.
 
-Overview
+## Overview
 
 Snippet Samurai is a React-based App created with simplicity and cognitive load awareness in mind. This minimalistic search tool allows the user to search for and view code snippets, which are hosted on a Heroku database.
 The app suggests results based on text entered into the input field, and features a submission form which allows the user to post their
@@ -14,7 +14,7 @@ own code snippets to the database. New entries to the database can instantly be 
 
 ## Features
 
-- Code Snippet retreival
+- Code Snippet retrieval
 - Code Snippet database entry
 - Reponsive UI
   <br>
@@ -57,7 +57,7 @@ To run this project, you will need to add the following environment variables to
 
 `ANOTHER_API_KEY`
 
-## Code Exampleependency
+## Code Example dependency
 
 ```javascript
 const [isActive, setActive] = useState('false');
