@@ -2,7 +2,7 @@
 
 [![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
 
-<div style="text-align:center"><img src="https://i.imgur.com/xYKiF06.png" /></div>.
+<div style="text-align:center"><img src="https://i.imgur.com/xYKiF06.png" /></div>
 
 ## Overview
 
