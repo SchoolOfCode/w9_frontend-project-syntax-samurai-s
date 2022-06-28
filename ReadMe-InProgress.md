@@ -22,11 +22,10 @@ own code snippets to the database. New entries to the database can instantly be 
 
 ## Roadmap
 
-- Dark Mode
-- User save snippets
+- Colour themes (light and dark, solarized light and dark, deuteranopia friendly)
+- Option for user to 'star' or 'favourite' snippets to refer back to
 - User registration / Log In system
-- Download Json with code snippet
-- Accessibility modes (Colorblind etc)
+
   <br>
   <br>
 
@@ -39,8 +38,8 @@ Install the Snippet Samurai Front/Back End using npm
 ```
 
 ```bash
-  npm i
   cd Snippet Samurai
+   npm i
 ```
 
 Start the server
@@ -57,7 +56,7 @@ To run this project, you will need to add the following environment variables to
 
 `ANOTHER_API_KEY`
 
-## Code Example Dependency
+## Code Example
 
 ```javascript
 const [isActive, setActive] = useState('false');
@@ -102,12 +101,16 @@ Answer 2
 ## Dependency Licenses
 
 - React
+<br>
   [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 - React testing Library
+<br>
   [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 - Axios
+<br>
   [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 - Jest
+<br>
   [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 
 ## Authors
