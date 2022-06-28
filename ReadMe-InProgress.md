@@ -13,6 +13,7 @@ own code snippets to the database. New entries to the database can instantly be 
 <br>
 
 ## Demo
+
 <div style="text-align:left"><img src="https://i.imgur.com/R0ZJzkh.gif" /></div>
 <br>
 <br>
@@ -106,16 +107,16 @@ Answer 2
 ## Dependency Licenses
 
 - React
-<br>
+  <br>
   [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 - React testing Library
-<br>
+  <br>
   [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 - Axios
-<br>
+  <br>
   [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 - Jest
-<br>
+  <br>
   [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 
 ## Authors
@@ -124,3 +125,5 @@ Answer 2
 - [Matt Davies](https://github.com/DevMattDavies)
 - [Mari](https://github.com/wisteria-hawthorn)
 - [CJ](https://www.https://github.com/Esva)
+
+<span style="font-family:Papyrus; font-size:1em;">_document version: 1.0_</span>
