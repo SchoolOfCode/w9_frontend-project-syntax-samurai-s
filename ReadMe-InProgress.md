@@ -8,14 +8,12 @@
 
 Snippet Samurai is a React-based App created with simplicity and cognitive load awareness in mind. This minimalistic search tool allows the user to search for and view code snippets, which are hosted on a Heroku database. The app suggests results based on text entered into the input field, and features a submission form which allows the user to post their own code snippets to the database. New entries to the database can instantly be accessed on the frontend.
 <br>
-<br>
 
 ## Features
 
 - Code Snippet retrieval
 - Code Snippet database entry
 - Responsive UI
-  <br>
   <br>
 
 ## Roadmap
@@ -25,7 +23,6 @@ Snippet Samurai is a React-based App created with simplicity and cognitive load 
 - User registration / Log In system
 
   <br>
-  <br>
 
 ## Installation / Run Locally
 
@@ -33,10 +30,6 @@ Install the Snippet Samurai Front/Back End using npm
 
 ```bash
   git clone
-
-```
-
-```bash
   cd w9_frontend-project-syntax-samurai-s
   npm i
 ```
@@ -50,13 +43,12 @@ Start the FrontEnd
 ## Further Resources
 
 Snippet Samurai Back-End Project [Git Respository](https://github.com/SchoolOfCode/w9_backend-project-syntax-samurai-s)
-
-  <br>
-  <br>
+<br>
 
 ## Environment Variables
 
 Enviromental variables are not provided for the "Front-End" project
+<br>
 
 ## Code Example
 
@@ -98,7 +90,6 @@ Answer 1
 Answer 2
 
 <br>
-<br>
 
 ## Dependency Licenses
 
@@ -122,4 +113,4 @@ Answer 2
 - [Mari](https://github.com/wisteria-hawthorn)
 - [CJ](https://www.https://github.com/Esva)
 
-<span style="font-family:Papyrus; font-size:1em;">_document version: 1.0_</span>
+<span style="font-family:Papyrus; font-size:1em;">_document version: 1.3_</span>
