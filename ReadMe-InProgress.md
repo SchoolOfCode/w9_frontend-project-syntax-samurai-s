@@ -36,23 +36,33 @@ Install the Snippet Samurai Front/Back End using npm
 ```
 
 ```bash
-  cd Snippet Samurai
-   npm i
+  cd w9_frontend-project-syntax-samurai-s
+  npm i
 ```
 
-Start the server
+Start the FrontEnd
 
 ```bash
-  npm run dev
+  npm start
 ```
+
+Start the Back-End
+
+```bash
+  Navigate to //BackEndRepo URL
+  git clone //BackEndRepo URL
+  cd w9_backend-project-syntax-samurai-s
+  npm i
+  npm run dev
+  Select Y when asked to run on a different port
+```
+
+  <br>
+  <br>
 
 ## Environment Variables
 
-To run this project, you will need to add the following environment variables to your .env file
-
-`API_KEY`
-
-`ANOTHER_API_KEY`
+Enviromental variables are not provided for the "Front-End" project
 
 ## Code Example
 
