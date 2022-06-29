@@ -12,58 +12,23 @@ function Form() {
     docs: "",
   });
 
-  const [title, setTitle] = useState("");
-  const [snippet, setSnippet] = useState("");
-  const [description, setDescription] = useState("");
-  const [video, setVideo] = useState("");
-  const [docs, setDocs] = useState("");
-
-  const onChangeTitle = (e) => {
-    const input = e.target.value;
-    console.log(input);
-    setTitle(input);
-  };
-
-  const onChangeSnippet = (e) => {
-    const input = e.target.value;
-    console.log(input);
-    setSnippet(input);
-  };
-
-  const onChangeDescription = (e) => {
-    const input = e.target.value;
-    console.log(input);
-    setDescription(input);
-  };
-
-  const onChangeVideo = (e) => {
-    const input = e.target.value;
-    console.log(input);
-    setVideo(input);
-  };
-
-  const onChangeDocs = (e) => {
-    const input = e.target.value;
-    console.log(input);
-    setDocs(input);
-  };
-
   const onSubmit = (e) => {
-    console.log(title, description, video, snippet, docs);
+    e.preventDefault();
+
     setFormValue({
-      title: title,
-      description: description,
-      video: video,
-      codesyntax: snippet,
-      docs: docs,
+      title: e.target[0].value,
+      description: e.target[2].value,
+      video: e.target[3].value,
+      codesyntax: e.target[1].value,
+      docs: e.target[4].value,
     });
     axios
       .post("http://localhost:3000/snippets", {
-        title: title,
-        description: description,
-        video: video,
-        codesyntax: snippet,
-        docs: docs,
+        title: formValue.title,
+        description: formValue.description,
+        video: formValue.video,
+        codesyntax: formValue.codesyntax,
+        docs: formValue.docs,
       })
       .then((response) => {
         console.log(response);
@@ -79,12 +44,7 @@ function Form() {
         </div>
         <label className="form-labels" id="submit-title">
           Title:
-          <input
-            className="input-box"
-            type="text"
-            name="title"
-            onChange={onChangeTitle}
-          />
+          <input className="input-box" type="text" name="title" />
         </label>
         <label className="form-labels" id="submit-snippet">
           Code Snippet:
@@ -94,7 +54,6 @@ function Form() {
             cols="50"
             type="text"
             name="snippet"
-            onChange={onChangeSnippet}
           />
         </label>
         <label className="form-labels" id="submit-description">
@@ -105,26 +64,15 @@ function Form() {
             cols="50"
             type="text"
             name="description"
-            onChange={onChangeDescription}
           />
         </label>
         <label className="form-labels" id="submit-video">
           Youtube Link:
-          <input
-            className="input-box"
-            type="text"
-            name="youtube-link"
-            onChange={onChangeVideo}
-          ></input>
+          <input className="input-box" type="text" name="youtube-link"></input>
         </label>
         <label className="form-labels" id="submit-docs">
           Docs Link:
-          <input
-            className="input-box"
-            type="text"
-            name="docs-link"
-            onChange={onChangeDocs}
-          />
+          <input className="input-box" type="text" name="docs-link" />
         </label>
         <input id="submit-button" type="submit" value="Submit Snippet" />
       </div>

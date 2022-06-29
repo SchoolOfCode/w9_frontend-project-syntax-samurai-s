@@ -1,13 +1,11 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import "./Searchbox.modules.css";
+import instance from "../../axiosConfig";
 import axios from "axios";
-import { useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import CloseIcon from "@mui/icons-material/Close";
 
 function Searchbox({
   placeholder,
-  data,
   resultClick,
   filteredData,
   setFilteredData,
@@ -15,10 +13,6 @@ function Searchbox({
   wordEntered,
   setWordEntered,
 }) {
-  // const [filteredData, setFilteredData] = useState([]);
-  // const [wordEntered, setWordEntered] = useState("");
-  const [isActive, setActive] = useState("false");
-
   const handleFilter = (e) => {
     const searchWord = e.target.value;
     console.log(searchWord);
@@ -27,8 +21,7 @@ function Searchbox({
       .get(`http://localhost:3000/snippets?title=${searchWord}`)
       .then((response) => {
         console.log(response.data.data);
-        setFilteredData(response.data.data)
-
+        setFilteredData(response.data.data);
       });
     const newFilter = filteredData.map((value) => {
       return value.title.toLowerCase().includes(searchWord.toLowerCase());
@@ -45,7 +38,6 @@ function Searchbox({
     setWordEntered("");
   };
 
- 
   return (
     <div className="search">
       <div className="searchInputs">
