@@ -32,7 +32,9 @@ Snippet Samurai is a React-based App created with simplicity and cognitive load 
 Install the Snippet Samurai Front/Back End using npm
 
 ```bash
-  git clone //git repo url
+  git clone [Snippet Samurai GIT](/SchoolOfCode/
+  w9_frontend-project-syntax-samurai-s.git)
+
 ```
 
 ```bash
@@ -49,8 +51,8 @@ Start the FrontEnd
 Start the Back-End
 
 ```bash
-  Navigate to //BackEndRepo URL
-  git clone //BackEndRepo URL
+  Navigate to [Snippet Samurai Back-End](https://github.com/SchoolOfCode/w9_backend-project-syntax-samurai-s)
+  git clone [Snippet Samurai Back-End GIT](https://github.com/SchoolOfCode/w9_backend-project-syntax-samurai-s.git)
   cd w9_backend-project-syntax-samurai-s
   npm i
   npm run dev
