@@ -16,16 +16,41 @@ describe('Tests to see if page is renders and a .clck action can be taken', () =
 		//ignore red line, code still works. Unsure why this started to happen, just randomly appeared even though code is valid
 		cy.wait(1000); //waits 1 second before attempting a click
 		cy.get('a[href*="submit"]').click(); //searches for submit and clicks
+		cy.wait(1000);
+		cy.contains('Title:').should('exist');
+		cy.wait(1000);
+		cy.contains('Code Snippet:').should('exist');
+		cy.wait(1000);
+		cy.contains('Description:').should('exist');
+		cy.wait(1000);
+		// cy.contains('YouTube Link:').should('exist');   //<-- Doesn't find this, will look into it
+		// cy.wait(1000);
+		cy.contains('Docs Link:').should('exist');
+		cy.wait(1000);
+		cy.contains('Submit Snippet').should('exist');
 	});
 });
 
 /*
 Writie tests here before adding to the test stack above :
 
-describe('Tests to see if cypress can type inside the text box on front page', () => {
-	it('Type Test', () => {
-		cy.
-	});
+describe('Tests to see if page is renders and a .clck action can be taken', () => {
+	it('Submit Click Test', () => {
+		cy.visit('localhost:3000/'); 
+		cy.wait(1000); 
+		cy.get('a[href*="submit"]').click();
+		cy.wait(1000); 
+		y.contains('Title:').should('exist');
+		cy.wait(1000);
+		cy.contains('Code Snippet:').should('exist');
+		cy.wait(1000);
+		cy.contains('Description:').should('exist');
+		cy.wait(1000);
+		cy.contains('YouTube Link:').should('exist');
+		cy.wait(1000);
+		cy.contains('Docs Link:').should('exist');
+		cy.wait(1000);
+		cy.contains('Submit Snippet').should('exist');
 });
 
 
