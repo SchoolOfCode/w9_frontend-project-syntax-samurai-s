@@ -19,9 +19,14 @@ describe('Tests to see if page is renders and a .clck action can be taken', () =
 	});
 });
 
-//type test
-// describe('Tests to see if input field can be typed in', () => {
-// 	it('Type Test', () => {
-// 		cy.
-// 	});
-// });
+/*
+Writie tests here before adding to the test stack above :
+
+describe('Tests to see if cypress can type inside the text box on front page', () => {
+	it('Type Test', () => {
+		cy.
+	});
+});
+
+
+*/
