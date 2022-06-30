@@ -1,5 +1,7 @@
 {
-    "name": "Using fixtures to represent data",
-    "email": "hello@cypress.io",
-    "body": "Fixtures are a great way to mock data for responses to routes"
+    "title": "Dummy Test",
+    "description": "I'm a dummy and I'm here to do dumb dummy things",
+    "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "codesyntax": "This dummy likes to rock out to Rick Astley",
+    "docs": "I'm a dummy, I'm virtual and I'm controlled by my Cypress overlord"
   }
